@@ -94,7 +94,6 @@ def read_parallel_corpus(path, has_alignments=False):
                 assert src_index not in these_alignments[trg_index]
                 these_alignments[trg_index][src_index] = kind
             alignments.append(these_alignments)
-    assert validate(src_corpus, trg_corpus, alignments)
     return src_corpus, trg_corpus, alignments
 
 def alignment_string(alignments):
